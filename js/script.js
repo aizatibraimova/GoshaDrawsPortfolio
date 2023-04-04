@@ -1,1 +1,3 @@
-console.log('Hello!');
+$('#videoCarousel').carousel({
+    interval: 10000
+  })
