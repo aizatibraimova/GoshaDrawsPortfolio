@@ -4,15 +4,23 @@
   "description": "This is my project from scratch",
   "main": "index.js",
   "scripts": {
+    "lite": "lite-server", 
+    "scss": "sass css:css",
+    "start": "npm run lite",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Aizat Ibraimova",
   "license": "ISC",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.4.0",
+    "animate.css": "^4.1.1",
     "bootstrap": "^4.5.2",
     "font-awesome": "^4.7.0",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1"
+  },
+  "devDependencies": {
+    "node-sass": "^6.0.1",
+    "sass": "^1.61.0"
   }
 }

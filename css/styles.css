@@ -29,6 +29,7 @@ h1, h3, h4, p {
     background-color: #EAE0DA; 
     font-family: 'Crimson Text', serif;
     font-size: larger;
+    opacity: 0.8;
 }
 
 .carousel {
@@ -39,7 +40,7 @@ h1, h3, h4, p {
     box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
 }
 
-
+/* notes from main page */
 ul.notes li {
   margin: 30px 40px 50px 0px;
   float: left;
@@ -106,8 +107,170 @@ a {
     text-decoration: none;
 }
 
+/* Animated avatar */
 #profilePic {
     -moz-box-shadow: 5px 5px 7px #212121;
     -webkit-box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
     box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
 }
+.animate__animated.animate__bounce {
+  --animate-duration: 2s;
+}
+@-webkit-keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+  transform: translatey(0px);
+  -webkit-animation: float 6s ease-in-out infinite;
+          animation: float 6s ease-in-out infinite;
+}
+
+
+
+* {
+  transition: 0.3s;
+}
+
+#gallery.custom {
+  padding: 0 15px;
+}
+#gallery.custom img {
+  display: block;
+  margin: 15px 0;
+  border-radius: 300px 30px 300px 300px;
+}
+#gallery.custom img:hover {
+  border-radius: 30px 90px 30px 30px;
+}
+
+#portfolioModal.custom .modal-content {
+  background: none;
+  border: none;
+}
+#portfolioModal.custom .modal-header {
+  border: none;
+}
+#portfolioModal.custom .modal-header button {
+  background: none;
+  border-radius: 100px 100px 0 0;
+  padding: 5px 10px;
+  opacity: 1;
+  position: relative;
+  top: 3px;
+  border: solid 2px white;
+}
+
+#portfolioModal.custom .modal-header button:hover {
+  top: 3px;
+}
+#portfolioModal.custom .modal-header span {
+  color: white;
+}
+#portfolioModal.custom .modal-body {
+  padding: 0;
+  border: none;
+  position: relative;
+}
+#portfolioModal.custom .modal-body::before, #portfolioModal.custom .modal-body::after {
+  content: "";
+  height: 50px;
+  width: 50px;
+  display: block;
+  position: absolute;
+  background: white;
+  border-radius: 3px 10px;
+}
+
+#portfolioModal.custom .modal-body::before {
+  top: -5px;
+  left: -5px;
+}
+
+#portfolioModal.custom .modal-body::after {
+  bottom: -5px;
+  right: -5px;
+  z-index: -1;
+}
+
+#portfolioModal.custom .modal-footer {
+  border: none;
+  margin-top: 60px;
+}
+
+#portfolioModal.custom .modal-footer .btn {
+  margin: auto;
+  border: solid 2px white;
+  background: none;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  padding: 0.2em 0.7em;
+}
+#portfolioModal.custom .modal-footer .btn:hover {
+  background: white;
+  color: black;
+}
+#portfolioModal.custom .carousel-control-prev, #portfolioModal.custom .carousel-control-next {
+  font-size: 2em;
+  top: auto;
+  opacity: 1;
+  bottom: -52px;
+}
+
+#portfolioModal.custom .carousel-control-next-icon, #portfolioModal.custom .carousel-control-prev-icon {
+  height: 30px;
+  width: 30px;
+}
+
+#portfolioModal.custom .carousel-indicators {
+  bottom: -60px;
+}
+
+#portfolioModal.custom .carousel-indicators li {
+  height: 30px;
+  border-radius: 100px;
+  background: none;
+  border: solid 2px white;
+}
+
+#portfolioModal.custom .carousel-indicators li:hover {
+  background: white;
+}
+#portfolioModal.custom .carousel-indicators li.active {
+  background: white;
+}
+
+
